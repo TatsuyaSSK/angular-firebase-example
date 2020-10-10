@@ -9,7 +9,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
 
-
+// ここでこのモジュール内で使用される対象を読み込む
 @NgModule({
   declarations: [CreateComponent],
   imports: [
