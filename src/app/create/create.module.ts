@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { CreateRoutingModule } from './create-routing.module';
 import { CreateComponent } from './create/create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [CreateComponent],
   imports: [
     CommonModule,
-    CreateRoutingModule
+    CreateRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class CreateModule { }
