@@ -22,7 +22,7 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "aot": false,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -46,6 +46,7 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
+              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -127,8 +128,5 @@
       }
     }
   },
-  "defaultProject": "dog-hunting",
-  "cli": {
-    "analytics": "ed6389d6-f8f4-4697-ba5c-486ad02e7349"
-  }
+  "defaultProject": "dog-hunting"
 }
