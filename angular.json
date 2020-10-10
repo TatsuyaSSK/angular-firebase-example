@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "dog-hunting"
+  "defaultProject": "dog-hunting",
+  "cli": {
+    "analytics": "c9b1c02d-6a57-41b3-b6e4-cfedb9584b1f"
+  }
 }
