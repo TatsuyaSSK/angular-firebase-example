@@ -8,6 +8,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatButtonModule} from '@angular/material/button';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 // ここでこのモジュール内で使用される対象を読み込む
 @NgModule({
@@ -21,7 +22,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatRadioModule,
     MatButtonModule,
-
+    SwiperModule,
   ]
 })
 export class CreateModule { }
