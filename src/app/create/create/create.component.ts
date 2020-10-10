@@ -26,4 +26,8 @@ export class CreateComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  submit(){
+    console.log(this.form.value);
+  }
+
 }
