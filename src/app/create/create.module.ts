@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatInputModule,
     MatFormFieldModule,
     MatRadioModule,
+    MatButtonModule,
 
   ]
 })
