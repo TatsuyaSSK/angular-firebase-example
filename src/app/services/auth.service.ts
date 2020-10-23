@@ -27,6 +27,7 @@ export class AuthService {
       this.snackBar.open('ようこそgitpetへ！', null, {
         duration: 2000
       });
+      this.router.navigateByUrl('/create');
     });
   }
 
@@ -36,8 +37,8 @@ export class AuthService {
       this.snackBar.open('ログアウトしました', null, {
         duration: 2000
       });
+      this.router.navigateByUrl('/welcome');
     });
   }
-
 
 }
