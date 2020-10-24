@@ -5,14 +5,42 @@ admin.initializeApp();
 
 const db  = admin.firestore();
 
+const expTable = [
+  20,
+  40,
+  100,
+  250,
+  500,
+  1000,
+  1500,
+  4000,
+  10000,
+];
+
 export const gitHook = functions.region('asia-northeast1').https.onRequest(async (request, response) => {
   const pets = await db.collection('pets')
   .where('ownerGitHubId', '==', request.body.sender.id)
   .get();
 
-  const increment = admin.firestore.FieldValue.increment(10);
+  const pet = pets.docs[0].data();
+
+  const EARN_EXPERIENCE = 10;
+
+  let level = 1;
+
+  expTable.some(nextExp =>{
+    if (pet.exp + EARN_EXPERIENCE > nextExp){
+      level++;
+      return false;
+    } else {
+      return true;
+    }
+  });
+
+  const increment = admin.firestore.FieldValue.increment(EARN_EXPERIENCE);
   pets.docs.forEach(doc => doc.ref.update({
-    exp: increment
+    exp: increment,
+    level
   }));
   response.send('success');
 });
