@@ -17,7 +17,7 @@ export class PetComponent implements OnInit {
   }
 
   getExpPercentage(): number{
-    return (this.pet.exp / this.maxExp) * 100
+    return (this.pet.exp / this.maxExp) * 100;
   }
 
 }
