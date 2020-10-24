@@ -66,6 +66,7 @@ export class CreateComponent implements OnInit {
       exp: 0,
       trainerId: this.authService.uid,
       gender: formData.gender,
+      ownerGitHubId: this.authService.GitHubId,
     });
   }
 }

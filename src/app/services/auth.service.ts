@@ -12,6 +12,7 @@ export class AuthService {
 
   afUser$: Observable<User> = this.afAuth.user;
   uid: string;
+  GitHubId: number;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -20,6 +21,7 @@ export class AuthService {
   ) {
     this.afUser$.subscribe(user => {
       this.uid = user && user.uid;
+      this.GitHubId = user && +user.providerData[0].uid;
     });
    }
 
