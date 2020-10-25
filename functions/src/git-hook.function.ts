@@ -29,7 +29,7 @@ export const gitHook = functions.region('asia-northeast1').https.onRequest(async
   let level = 1;
 
   expTable.some(nextExp =>{
-    if (pet.exp + EARN_EXPERIENCE > nextExp){
+    if (pet.exp + EARN_EXPERIENCE >= nextExp){
       level++;
       return false;
     } else {
