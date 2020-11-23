@@ -31,7 +31,5 @@ export class ExpPipe implements PipeTransform {
     else {
       return exp + '/' + nextExp;
     }
-
   }
-
 }
